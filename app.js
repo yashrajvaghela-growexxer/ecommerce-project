@@ -7,3 +7,6 @@ app.listen(PORT, () => {
 console.log(`Server running on port ${PORT}`);
 });
 module.exports = app;
+app.get('/api/users', (req, res) => {
+res.json({ users: [] });
+});
