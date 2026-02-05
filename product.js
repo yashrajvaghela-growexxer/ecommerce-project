@@ -4,9 +4,13 @@ this.name = name;
 this.price = price;
 this.discount = 0;
 }
+
 getPrice() {
-return this.price - (this.price * this.discount / 100);
+const tax = 0.18;
+const discountedPrice = this.price - (this.price * this.discount / 100);
+return discountedPrice + (discountedPrice * tax);
+
 }
 }
 module.exports = Product;
-4. Commit with message "Initial pro
+
